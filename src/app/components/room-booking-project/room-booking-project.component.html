@@ -1,0 +1,45 @@
+<mat-card class="project-card">
+  <mat-card-header>
+    <mat-card-title>{{ projectDetails.title }}</mat-card-title>
+    <mat-card-subtitle>Projet Java - Gestion de réservations</mat-card-subtitle>
+  </mat-card-header>
+
+  <img
+    mat-card-image
+    src="assets/images/room-booking-demo.png"
+    alt="Demo du gestionnaire de salles"
+  />
+
+  <mat-card-content>
+    <p>{{ projectDetails.description }}</p>
+
+    <mat-tab-group>
+      <mat-tab label="Fonctionnalités">
+        <ul>
+          <li *ngFor="let feature of projectDetails.features">{{ feature }}</li>
+        </ul>
+      </mat-tab>
+
+      <mat-tab label="Technologies">
+        <div class="tech-chips">
+          <!-- <mat-chip *ngFor="let tech of projectDetails.technologies">{{
+            tech
+          }}</mat-chip> -->
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Code">
+        <pre class="code-block">{{
+          projectDetails.codeSnippets.availabilityCheck
+        }}</pre>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button color="primary">
+      <mat-icon>code</mat-icon>
+      Voir sur GitHub
+    </button>
+  </mat-card-actions>
+</mat-card>

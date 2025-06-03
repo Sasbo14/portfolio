@@ -8,7 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true, // <-- Ajouté
   imports: [RouterModule, MatToolbarModule, MatButtonModule],
   template: `
-    <!-- Remplacez templateUrl par template -->
     <mat-toolbar color="primary">
       <span>Mon Portfolio</span>
       <nav>
